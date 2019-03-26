@@ -1,7 +1,7 @@
 #  *Google Simple News*
 
 - Created by: `J`
-- View online at: 
+- View online at:https://nifty-swartz-ca822f.netlify.com/ 
 
 `Using React for a movies page`
 
