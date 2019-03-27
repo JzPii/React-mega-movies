@@ -1,4 +1,4 @@
-#  *Google Simple News*
+#  *React - Mega Movies*
 
 - Created by: `J`
 - View online at:https://nifty-swartz-ca822f.netlify.com/ 
