@@ -1,12 +1,10 @@
 #  *React - Mega Movies*
 
 - Created by: `J`
-- View online at:https://nifty-swartz-ca822f.netlify.com/ 
+- View online at: http://chill-cine.netlify.com
 
 `Using React for a movies page`
 
-## Instruction
-![](images/instr.gif)
 
 
 
