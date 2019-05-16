@@ -90,7 +90,7 @@ changeModalToTrue= (id) => {
 
     
     
-<ReactModal isOpen={this.state.showModal}>
+<ReactModal isOpen={this.state.showModal} style={{backgroundColor: 'transperant'}}>
 <Hasan handleState={this.changeModalToFalse} id= {this.state.trailerId}  />
 </ReactModal>
 
@@ -98,7 +98,7 @@ changeModalToTrue= (id) => {
       <FeaturedMovies featuredOne={this.state.featured[0]}/>
       <MovieList movies={this.state.moviesList} searchProp = {this.state.searchTerm} handleState={(id)=>this.changeModalToTrue(id)}/>
       {/* <Footer/> */}
-      <div className="btn btn-light" onClick={this.seeMore}>Next page...</div>
+      <div className="btn btn-secondary" onClick={this.seeMore} style={{marginBottom:'70px'}}>Next page...</div>
       </div>
     );
   }

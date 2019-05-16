@@ -14,15 +14,15 @@ export default class Hasan extends Component {
         {/* <button onClick={this.props.handleState}> Hide Modal </button> */}
 
       </div>
-      <div className="modal-body">
+      <div className="modal-body d-flex justify-content-center">
 
-      <YouTube height={600} width={1000}
+      <YouTube className="col-sm-12 col-md-8 col-lg-12" height={400}
         video={this.props.id}
         autoplay
       />
       </div>
       <div className="modal-footer">
-        <button type="button" className="btn btn-primary">Save changes</button>
+        {/* <button type="button" className="btn btn-primary">Save changes</button> */}
         <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={this.props.handleState}>Close</button>
       </div>
     </div>

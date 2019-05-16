@@ -17,7 +17,7 @@ export default class MovieList extends Component {
 
     <div className="my-4 mx-2 row">
     {this.props.movies
-    // .filter(xxx => xxx.title.toLowerCase().includes(this.props.searchProp.toLowerCase()))
+    .filter(xxx => xxx.title.toLowerCase().includes(this.props.searchProp.toLowerCase()))
     .map(movie =>
             <MovieCard {...movie} hello={(id)=>this.props.handleState(id)}/>   )}
         {/* <MovieFilter className="col-sm-12 col-lg-3"/> */}
