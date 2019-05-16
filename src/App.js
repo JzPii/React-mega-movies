@@ -3,6 +3,10 @@ import './App.css';
 import NavBar from './NavBar';
 import MovieList from './MovieList';
 import FeaturedMovies from './featuredMovies';
+import ReactModal from 'react-modal';
+import Hasan from './Hasan.js'
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 class App extends Component {
 constructor () {
@@ -11,6 +15,9 @@ constructor () {
     moviesList: [],
     featured:[],
     searchTerm: "",
+    showModal: false,
+    trailerId: null
+
   }
   this.API_NOW = 'e2c2243138750f562384ee018d3e19cf';
   this.page = 1;
@@ -35,6 +42,16 @@ getMovies = async () => {
   })
 }
 
+getMovieTrailer = async (movie_id) => {
+  const url = `https://api.themoviedb.org/3/movie/${movie_id}/videos?api_key=${this.API_NOW}&language=en-US`;
+  let results = await fetch(url);
+  let data = await results.json(); 
+  this.setState({
+   trailerId: data.results[0].key
+  })
+}
+
+
 seeMore = () => {
   this.page = (this.page + 1)
   this.getMovies()
@@ -50,12 +67,36 @@ onSearch= (text) => {
     searchTerm: text,
   })
 }
+
+changeModalToFalse= () => {
+  this.setState({
+    showModal: false
+  })
+}
+
+changeModalToTrue= (id) => {
+  this.setState({
+    showModal: true
+  });
+  this.getMovieTrailer(id);
+}
   render() {
     return (
       <div className="App">
+
+    {/* <button onClick={() => this.setState({
+      showModal:true
+    })}>Open Modal</button> */}
+
+    
+    
+<ReactModal isOpen={this.state.showModal}>
+<Hasan handleState={this.changeModalToFalse} id= {this.state.trailerId}  />
+</ReactModal>
+
       <NavBar textChange={this.onSearch} />
       <FeaturedMovies featuredOne={this.state.featured[0]}/>
-      <MovieList movies={this.state.moviesList} searchProp = {this.state.searchTerm}/>
+      <MovieList movies={this.state.moviesList} searchProp = {this.state.searchTerm} handleState={(id)=>this.changeModalToTrue(id)}/>
       {/* <Footer/> */}
       <div className="btn btn-light" onClick={this.seeMore}>Next page...</div>
       </div>
