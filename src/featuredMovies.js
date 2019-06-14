@@ -25,10 +25,12 @@ export default class FeaturedMovies extends Component {
     }
 return(
 <div className="container-fluid ">
+    <div>
     <img className="card-img" src={'http://image.tmdb.org/t/p/original/' + this.props.featuredOne.backdrop_path}  alt='feat'/>
-    <div className="text-center imgoverlay col-sm-0 col-md-0">
+    
+    <div className="text-center imgoverlay hidden-sm hidden-md">
         <h2 className="font-weight-bold" style={{fontFamily: 'Poiret One', }}>{this.props.featuredOne.title}</h2>
-        <p className="container card-text ">{this.props.featuredOne.overview}</p>
+        {/* <p className="container card-text ">{this.props.featuredOne.overview}</p> */}
         <button type="button" className="btn btn-outline-light">let's chill.</button>
     
             <div className="mt-3">
@@ -57,7 +59,7 @@ return(
                   </div>
                 </div>
             </div>
-        
+      </div>
     </div>     
 </div>
 
