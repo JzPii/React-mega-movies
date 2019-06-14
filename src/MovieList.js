@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import MovieCard from './MovieCard';
 // import MovieFilter from './MovieFilter'
-import FeaturedMovies from './featuredMovies'
 
 export default class MovieList extends Component {
   render() {

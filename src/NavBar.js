@@ -29,7 +29,7 @@ export default class NavBar extends Component {
       
       </ul>
       <div className="input-group mr-5" style={{width:300}}>
-              <input type="text" className="form-control" placeholder="Search for Title" 
+              <input style={{backgroundColor:'transparent',color: 'beige'}} type="text" className="form-control" placeholder="Search for Title" 
               onChange = {(e) => this.props.textChange(e.target.value)}/>
               <div className="input-group-append">
                 <button className="btn btn-outline-secondary" type="button" id="button-addon2"><i className="fas fa-search" /* style={{color:White }} */ ></i></button>

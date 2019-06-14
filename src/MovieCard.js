@@ -11,7 +11,7 @@ export default class MovieCard extends Component {
                 <button type="button" className="btn btn-outline-light rounded-2 col-5" onClick={()=> this.props.hello(this.props.id)}>Trailer</button>
                 <button type="button" className="btn btn-outline-danger rounded-2 col-5">Chill now</button>
             </div>
-            <h3 className="font-weight-bold" style={{fontFamily: 'fantasy'}}>{this.props.title}</h3>
+            <h3 className="font-weight-bold" style={{fontFamily: 'Poiret One'}}>{this.props.title}</h3>
             <p className="text-right font-italic text-muted">Rated: {this.props.vote_average}/10 </p>
             <p className="text-left" style={{}}>{this.props.overview}</p>
         </div>

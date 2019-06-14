@@ -1,15 +1,33 @@
 import React, { Component } from 'react'
+import PacmanLoader from 'react-spinners/PacmanLoader';
 
 export default class FeaturedMovies extends Component {
+  constructor () {
+    super()
+    this.state = {
+      loading: true
+    }
+  }
   render() {
     if (!this.props.featuredOne) {
-        return <div>Loading ...</div>
+        return (
+        <div className="" style={{minHeight:'500px', marginTop: '70px'}}>
+            <PacmanLoader
+              className=""
+              style={{marginLeft:'70px'}}
+              sizeUnit={"px"}
+              size={150}
+              loading={this.state.loading}
+              color={'burlywood'}>
+            </PacmanLoader>
+        </div>
+        )
     }
 return(
 <div className="container-fluid ">
     <img className="card-img" src={'http://image.tmdb.org/t/p/original/' + this.props.featuredOne.backdrop_path}  alt='feat'/>
-    <div className="text-center imgoverlay">
-        <h3 className="font-weight-bold" style={{fontFamily: 'fantasy'}}>{this.props.featuredOne.title}</h3>
+    <div className="text-center imgoverlay col-sm-0 col-md-0">
+        <h2 className="font-weight-bold" style={{fontFamily: 'Poiret One', }}>{this.props.featuredOne.title}</h2>
         <p className="container card-text ">{this.props.featuredOne.overview}</p>
         <button type="button" className="btn btn-outline-light">let's chill.</button>
     
