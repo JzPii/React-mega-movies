@@ -11,9 +11,16 @@ export default class MovieCard extends Component {
                 <button type="button" className="btn btn-outline-light rounded-2 col-5" onClick={()=> this.props.hello(this.props.id)}>Trailer</button>
                 <button type="button" className="btn btn-outline-danger rounded-2 col-5">Chill now</button>
             </div>
-            <h3 className="font-weight-bold" style={{fontFamily: 'Poiret One'}}>{this.props.title}</h3>
+            <h3 className="font-weight-bold d-flex align-items-center justify-content-center"
+                style={{fontFamily: 'Poiret One',  
+                minHeight: '95px', marginBottom: '0'}}>{this.props.title}</h3>
             <p className="text-right font-italic text-muted">Rated: {this.props.vote_average}/10 </p>
-            <p className="text-left" style={{}}>{this.props.overview}</p>
+
+            <a class="btn btn-outline-light" style={{border: '0'}} data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Movie overview...</a>
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <p className="text-left" style={{}}>{this.props.overview}</p>
+                </div>
+            
         </div>
     </div>
 </div>

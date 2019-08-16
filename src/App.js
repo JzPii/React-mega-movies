@@ -95,7 +95,7 @@ changeModalToTrue= (id) => {
 </ReactModal>
 
       <NavBar textChange={this.onSearch} />
-      <FeaturedMovies featuredOne={this.state.featured[0]}/>
+      <FeaturedMovies featuredOne={this.state.featured[0]} />
       <MovieList movies={this.state.moviesList} searchProp = {this.state.searchTerm} handleState={(id)=>this.changeModalToTrue(id)}/>
       {/* <Footer/> */}
       <div className="btn btn-secondary" onClick={this.seeMore} style={{marginBottom:'70px'}}>Next page...</div>

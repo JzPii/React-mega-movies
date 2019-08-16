@@ -11,12 +11,12 @@ export default class FeaturedMovies extends Component {
   render() {
     if (!this.props.featuredOne) {
         return (
-        <div className="" style={{minHeight:'500px', marginTop: '70px'}}>
+        <div className="" style={{minHeight:'800px', marginTop: '140px', paddingLeft:'25%'}}>
             <PacmanLoader
               className=""
               style={{marginLeft:'70px'}}
               sizeUnit={"px"}
-              size={150}
+              size={120}
               loading={this.state.loading}
               color={'burlywood'}>
             </PacmanLoader>
@@ -24,14 +24,14 @@ export default class FeaturedMovies extends Component {
         )
     }
 return(
-<div className="container-fluid ">
+<div className="container-fluid " style={{paddingLeft:'0px', paddingRight:'0px'}}>
     <div>
     <img className="card-img" src={'http://image.tmdb.org/t/p/original/' + this.props.featuredOne.backdrop_path}  alt='feat'/>
     
     <div className="text-center imgoverlay hidden-sm hidden-md">
         <h2 className="font-weight-bold" style={{fontFamily: 'Poiret One', }}>{this.props.featuredOne.title}</h2>
         {/* <p className="container card-text ">{this.props.featuredOne.overview}</p> */}
-        <button type="button" className="btn btn-outline-light">let's chill.</button>
+        {/* <button type="button" className="btn btn-outline-light">let's chill.</button>
     
             <div className="mt-3">
                 <button className=" btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -58,7 +58,7 @@ return(
                   </div> 
                   </div>
                 </div>
-            </div>
+            </div> */}
       </div>
     </div>     
 </div>

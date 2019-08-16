@@ -16,7 +16,7 @@ export default class Hasan extends Component {
       </div>
       <div className="modal-body d-flex justify-content-center">
 
-      <YouTube className="col-sm-12 col-md-8 col-lg-12" height={400}
+      <YouTube className="col-sm-12 col-md-8 col-lg-12" height={550}
         video={this.props.id}
         autoplay
       />
