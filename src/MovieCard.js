@@ -28,3 +28,5 @@ export default class MovieCard extends Component {
     )
   }
 }
+
+// npm install --save react-infinite-scroll-component

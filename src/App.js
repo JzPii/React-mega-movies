@@ -61,7 +61,9 @@ componentDidMount(){
   this.getMovies();
   this.getFeatured();
 }
-
+componentDidUpdate() {
+  console.log(this.state)
+}
 onSearch= (text) => {
   this.setState({
     searchTerm: text,
